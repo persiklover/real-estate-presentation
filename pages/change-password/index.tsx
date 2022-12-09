@@ -43,7 +43,7 @@ export default function ChangePassword() {
 							}
 						}}
 					>
-						Войти
+						Сменить пароль
 					</button>
 					{error &&
 						<p>{error}</p>

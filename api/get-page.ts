@@ -1,7 +1,7 @@
 import axios, { AxiosError } from "axios";
 import url from "./url";
 
-export default async function getPage(url: string) {
+export default async function getPage(pageURL: string) {
 	let token: string;
 	let session: string;
 	if (typeof window !== "undefined") {
@@ -20,7 +20,7 @@ export default async function getPage(url: string) {
 	try {
 		const { data } = await axios.post(`${url}/api/get_page/`, {
 			session,
-			link: url
+			link: pageURL
 		}, {
 			headers: {
 				Authorization: `Token ${token}`

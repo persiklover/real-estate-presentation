@@ -1,18 +1,19 @@
 /* eslint-disable @next/next/no-img-element */
 import React, { useEffect, useState } from 'react';
 import Stack from "../../components/Stack/Stack";
-import login from '../../api/login';
 import getUserInfo, { UserInfo } from '../../api/get-user-info';
 import Link from 'next/link';
-import getSubscriptionExpireDate from '../../api/get-subscription-expire-date';
 import logout from '../../api/logout';
 
-export default function LK({ user }: { user: UserInfo }) {
+export default function LK() {
 	const [parseUrl, setParseUrl] = useState('');
-	const { firstname, lastname, email } = user;
+	const [user, setUser] = useState<UserInfo>({});
+	const { firstname, lastname, email, subscription_end } = user;
 
 	useEffect(() => {
-		login();
+		(async () => {
+			setUser(await getUserInfo());
+		})();
 	}, []);
 
 	return (
@@ -56,7 +57,7 @@ export default function LK({ user }: { user: UserInfo }) {
 					</div>
 
 					<span className="profile-expire-date">
-						Дата окончания подписки {'22.10.2023'}
+						Дата окончания подписки {subscription_end}
 					</span>
 
 					<div className="profile-buttons">
@@ -121,14 +122,4 @@ export default function LK({ user }: { user: UserInfo }) {
 		</section>
 		</>
 	);
-}
-
-export async function getStaticProps() {
-	await login();
-	const user = await getUserInfo();
-	await getSubscriptionExpireDate()
-
-	return {
-		props: { user }
-	}
 }

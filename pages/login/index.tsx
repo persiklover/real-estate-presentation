@@ -25,7 +25,9 @@ export default function Login() {
 						onClick={async e => {
 							e.preventDefault();
 							try {
-								await login(username, password);
+								const { token, session } = await login(username, password);
+								localStorage.setItem('token', token);
+								localStorage.setItem('session', session);
 								// Переходим на страницу личного кабинета
 								location.href = '/lk';
 							}
@@ -36,6 +38,9 @@ export default function Login() {
 										message = message?.detail;
 									}
 									setError(message);
+								}
+								else {
+									setError(error);
 								}
 							}
 						}}

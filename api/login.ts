@@ -1,25 +1,27 @@
-import axios from "axios";
+import axios, { AxiosError } from "axios";
 import url from "./url";
 
 export default async function login(username?: string, password?: string) {
-	const response = await axios.post(`${url}/api/login/`, {}, {
-		auth: {
-			username: username ?? 'kot18215',
-			password: password ?? '1234'
+	try {
+		const response = await axios.post(`${url}/api/login/`, {}, {
+			auth: {
+				username,
+				password
+			}
+		});
+		const data: {
+			need_change_pass: boolean;
+			session: string;
+			token: string;
+		} = response.data;
+		return data;
+	}
+	catch (error) {
+		if (error instanceof AxiosError) {
+			throw error.response.data?.detail;
 		}
-	});
-	const data: {
-		need_change_pass: boolean;
-		session: string;
-		token: string;
-	} = response.data;
-	if (typeof window !== "undefined") {
-		localStorage.setItem('token', data.token)
-		localStorage.setItem('session', data.session)
+		else {
+			throw error?.message ?? error;
+		}
 	}
-	else {
-		global.token = data.token;
-		global.session = data.session;
-	}
-	return data;
 }

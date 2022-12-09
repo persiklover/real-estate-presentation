@@ -1,7 +1,8 @@
 import axios, { AxiosError } from "axios";
+import getSubscriptionExpireDate from "./get-subscription-expire-date";
 import url from "./url";
 
-export type UserInfo = {
+export type UserInfo = Partial<{
 	id: number;
 	login: string;
 	need_change_pass: boolean
@@ -11,7 +12,8 @@ export type UserInfo = {
 	is_staff: boolean;
 	/** "2022-11-21T07:00:38Z" */
 	date_joined: string;
-};
+	subscription_end: string;
+}>;
 
 export default async function getUserInfo() {
 	let token: string;
@@ -34,7 +36,11 @@ export default async function getUserInfo() {
 			}
 		});
 		const info: UserInfo = data?.value;
-		return info;
+
+		const subscription_end = await getSubscriptionExpireDate();
+		console.log(subscription_end);
+
+		return { ...info, subscription_end };
 	}
 	catch (error) {
 		if (error instanceof AxiosError) {
