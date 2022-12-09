@@ -1,0 +1,79 @@
+.footer {
+	padding: 5.8rem 0 5.9rem;
+	// margin-bottom: 21.5rem;
+
+  &_content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    ul {
+      margin:  0;
+      padding: 0;
+      list-style: none;
+
+      li {
+        cursor: pointer;
+
+        .instagram {
+          margin-left: .5rem;
+        }
+      }
+    }
+
+    .contacts {
+      span {
+        font-family: 'Museo Sans Cyrl';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 2.2rem;
+        line-height: 2.6rem;
+      }
+
+      .links {
+        margin-top: 4rem;
+        display: flex;
+        width: fit-content;
+        gap: 4.8rem;
+
+        button {
+          height: fit-content;
+          padding: 1.8rem 3.2rem;
+          background-color: #D7FD2E;
+          border-radius: .5rem;
+
+          font-family: 'Museo Sans Cyrl';
+          font-style: normal;
+          font-weight: 600;
+          font-size: 1.6rem;
+          line-height: 1.9rem;
+          color: #404040;
+        }
+
+        ul {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 1.2rem;
+        }
+      }
+    }
+
+    .navigation {
+      ul {
+        display: flex;
+        flex-direction: column;
+        gap: 2.3rem;
+
+        li {
+          font-family: 'Museo Sans Cyrl';
+          font-style: normal;
+          font-weight: 400;
+          font-size: 2.2rem;
+          line-height: 2.6rem;
+        }
+      }
+    }
+
+  }
+}

@@ -1,0 +1,77 @@
+.section1 {
+	position: relative;
+	margin-top: 10.1rem;
+
+	.title {
+		margin: 0;
+
+		font-family: 'Montserrat';
+		font-style: normal;
+		font-weight: 700;
+		font-size: 4rem;
+
+		color: var(--primary-color);
+	}
+
+	.subtitle {
+		margin: 0;
+		margin-top: 3rem;
+
+		font-style: normal;
+		font-weight: 800;
+		font-size: 4.5rem;
+		text-transform: uppercase;
+		color: var(--secondary-color);
+	}
+
+	button {
+		margin-top: 15.1rem;
+
+		padding: 1.8rem 3.2rem;
+		background: #D7FD2E;
+		border: none;
+		border-radius: .5rem;
+
+		font-family: 'Museo Sans Cyrl';
+		font-style: normal;
+		font-weight: 600;
+		font-size: 2.3rem;
+		line-height: 2.8rem;
+		color: #404040;
+	}
+
+	&-examples {
+		position: absolute;
+		right: 13rem;
+		top:   11rem;
+
+		width:  32.6rem;
+		height: 20.1rem;
+
+		img {
+			position: absolute;
+			left: 0;
+			top:  0;
+			width:  100%;
+			height: 100%;
+
+			border-radius: .7rem;
+
+			@for $i from 2 through 3 {
+				&:nth-child(#{$i}) {
+					z-index: -$i;
+					transform: translate($i * -2rem, $i * 2rem);
+				}
+			}
+
+			&:last-child {
+				left:  unset;
+				right: -9.25rem;
+				top:    9rem;
+
+				width:  unset;
+				height: 14rem;
+			}
+		}
+	}
+}

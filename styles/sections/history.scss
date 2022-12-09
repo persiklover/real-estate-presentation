@@ -1,0 +1,72 @@
+.history {
+	display: flex;
+	padding-top: 6.2rem;
+
+	h3 {
+		margin: 0;
+		margin-bottom: 4.4rem;
+		font-family: 'Montserrat';
+		font-style: normal;
+		font-weight: 700;
+		font-size: 4.5rem;
+		line-height: 5.5rem;
+
+		color: #FFFFFF;
+	}
+
+	ol {
+		display: flex;
+		flex-direction: column;
+		list-style: none;
+		padding: 0;
+		margin: 0;
+
+		li {
+			display: flex;
+			margin-bottom: 2.8rem;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+
+			a {
+				align-self: center;
+				justify-content: flex-start;
+				width: 74.8rem;
+			}
+
+			div {
+				display: inline-flex;
+				margin-left: 6.6rem;
+
+				.download-btn {
+					display: flex;
+					padding: 1.8rem 3.2rem;
+					width: 15.4rem;
+					height: 6.4rem;
+
+					background: #D7FD2E;
+					border-radius: .5rem;
+				}
+
+				.share-btn {
+					svg {
+						width:  6.3rem;
+						height: 6.4rem;
+					}
+					margin-left: 2rem;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+
+					width:  6.3rem;
+					height: 6.4rem;
+
+					border: 1px solid #FFFFFF;
+					border-radius: .7rem;
+					background-color: transparent;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,68 @@
+.section2 {
+	margin-top: 18.5rem;
+
+	&-steps {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		margin-left: 2rem;
+
+		li {
+			margin-bottom: 13rem;
+
+			&:last-child {
+				margin-bottom: 0;
+
+				h3::after {
+					height: 11rem;
+				}
+			}
+		}
+
+		h3 {
+			position: relative;
+
+			margin: 0;
+
+			font-style: normal;
+			font-weight: 800;
+			font-size: 3.5rem;
+			text-transform: uppercase;
+			color: var(--secondary-color);
+
+			&::before {
+				content: '';
+				position: absolute;
+				left: -3.25rem;
+				top: 50%;
+				transform: translateY(-50%);
+				margin-top: .2rem;
+				background-color: currentColor;
+				width:  1.5rem;
+				height: 1.5rem;
+				border-radius: 50%;
+			}
+
+			&::after {
+				content: '';
+				position: absolute;
+				left: -2.55rem;
+				top:      3rem;
+				background-color: var(--primary-color);
+				width:  .1rem;
+				height: 20.5rem;
+			}
+		}
+
+		p {
+			margin: 0;
+			margin-top: 1.5rem;
+
+			font-family: 'Proba Pro';
+			font-style: normal;
+			font-weight: 400;
+			font-size: 2.5rem;
+			line-height: 3.1rem;
+		}
+	}
+}

@@ -1,0 +1,17 @@
+.wrapper {
+	padding: 3.4rem 0 3.7rem;
+
+	font-size: 1.7rem;
+}
+
+.inner {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.buttons {
+	display: flex;
+	align-items: center;
+	gap: 3rem;
+}

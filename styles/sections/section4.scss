@@ -1,0 +1,70 @@
+.section4 {
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+
+	&_content {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+
+		.video {
+			width:  62.9rem;
+			height: 35.6rem;
+			margin-right: 5.8rem;
+		}
+	}
+	margin-top: 18.2rem;
+
+	&_info {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+    justify-content: flex-start;
+
+		h2 {
+			margin-top: 0;
+		}
+
+		ul {
+			margin: 0;
+			padding: 0;
+			display: flex;
+			flex-direction: column;
+			gap: 4.4rem;
+			list-style: none;
+			
+
+			li {
+				display: flex;
+				align-items: center;
+
+				font-family: 'Proba Pro';
+				font-style:  normal;
+				font-weight: 400;
+				font-size:   2.4rem;
+				line-height: 3.1rem;
+
+				img {
+					width:  4.2rem;
+					height: 4.2rem;
+					margin-right: 1.65rem;
+				}
+			}
+		}
+
+		button {
+			display: flex;
+			margin-top: 6rem;
+			padding: 1.8rem 3.2rem;
+			background: #D7FD2E;
+			border-radius: .5rem;
+
+			font-family: 'Museo Sans Cyrl';
+			font-weight: 600;
+			font-size: 2.3rem;
+			line-height: 2.8rem;
+			color: #404040;
+		}
+	}
+}

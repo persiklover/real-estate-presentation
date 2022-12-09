@@ -1,0 +1,23 @@
+.button {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	padding: 1.65rem 3.2rem;
+	gap: 1rem;
+
+	border: 1px solid currentColor;
+	border-radius: .5rem;
+	background: none;
+
+	font-family: 'Museo Sans Cyrl';
+	font-style: normal;
+	font-weight: 600;
+	font-size: 2.3rem;
+	line-height: 2.8rem;
+	color: var(--secondary-color);
+
+	&--filled {
+		background: var(--secondary-color);
+		color: #404040;
+	}
+}

@@ -1,0 +1,64 @@
+.create-presentation {
+	display: flex;
+	flex-direction: column;
+	background-color: white;
+	padding: 8.7rem 16.5rem 15.8rem;
+
+	&__title {
+		display: flex;
+		align-items: flex-end;
+		margin-bottom: 5.2rem;
+
+		svg {
+			height: 9.1rem;
+			width:  9.6rem;
+		}
+
+		h2 {
+			margin: 0;
+			width: 70.1rem;
+			margin-bottom: -1.1rem;
+
+			font-family: 'Montserrat';
+			font-style: normal;
+			font-weight: 700;
+			font-size: 4.5rem;
+			line-height: 5.5rem;
+			color: #0E0E0E;
+
+			margin-left: 3.6rem;
+		}
+	}
+
+	&__input-container {
+		display: flex;
+		input {
+			padding: 1.9rem 2.6rem;
+			border: none;
+			width: 78.6rem;
+			height: 6.4rem;
+			left:  16.5rem;
+			top:   91.6rem;
+
+			background: #FFFFFF;
+
+			box-shadow: .4rem .4rem 1.4rem rgba(0, 0, 0, 0.1);
+			border-radius: .6rem;
+		}
+
+		button {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			border: none;
+			margin-left: 6.9rem;
+
+			padding: 1.8rem 3.2rem;
+			width: 15.5rem;
+			height: 6.4rem;
+
+			background: #D7FD2E;
+			border-radius: .5rem;
+		}
+	}
+}

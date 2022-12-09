@@ -1,0 +1,127 @@
+.editor {
+	position: relative;
+	display: flex;
+	background-color: #F7F7F7;
+	padding: 6.2rem 14.8rem 12rem 31.4rem;
+
+	&__window {
+		overflow-y: scroll;
+		position: relative;
+		display: flex;
+		width:  97.7rem;
+		height: 55.0rem;
+		padding: 2rem;
+
+		background: #FFFFFF;
+		box-shadow: .47rem .47rem 1.65rem rgba(0, 0, 0, 0.1);
+		color: black;
+
+		dd {
+			margin: 0;
+		}
+
+		.window-edit-menu {
+			position: absolute;
+			top:   2.24rem;
+			right: 3.25rem;
+
+			display: flex;
+			flex-direction: row !important;
+			ol {
+				display: flex;
+				list-style: none;
+				margin:  0;
+				padding: 0;
+
+				li {
+					margin-right: 1.53rem;
+
+					&:last-child {
+						margin-right: 0;
+					}
+					button {
+						width:  4.1rem;
+						height: 4.1rem;
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						border: none;
+						background-color: transparent;
+						border-radius: .59rem;
+					}
+
+					.picture-btn {
+						border: 1px solid #0E0E0E;
+						padding: .7rem .4rem .5rem .7rem;
+
+						svg {
+							width: 3rem;
+							height: 2.895rem;
+						}
+					}
+
+					.resize-btn {
+						background: #FFFFFF;
+						border: 1.18303px solid #B5CC11;
+
+						svg {
+							height: 2.7rem;
+						}
+					}
+
+					.delete-btn {
+						background-color: #0E0E0E;
+						border: 1.18303px solid #0E0E0E;
+
+						svg {
+							height: 2.6rem;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	&__menu {
+		box-sizing: border-box;
+		position: fixed;
+		left: 16.3rem;
+		top:  15.4rem;
+
+		width:   7.9rem;
+		height: 33.5rem;
+
+		background: #0E0E0E;
+		border-radius: .58rem;
+
+		ol {
+			margin:  0;
+			padding: 0;
+			padding: 3.9rem 1.9rem;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+
+			list-style: none;
+
+			li {
+				margin-bottom: 3rem;
+
+				&:last-child {
+					margin-bottom: 0;
+				}
+
+				button {
+					border: none;
+					background-color: transparent;
+
+					svg {
+						width:  4.1rem;
+						height: 4.1rem;
+					}
+				}
+			}
+		}
+	}
+}

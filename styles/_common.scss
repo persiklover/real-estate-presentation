@@ -1,0 +1,46 @@
+body {
+	background: var(--bg-color);
+
+	font-family: 'Montserrat', sans-serif;
+	color: var(--primary-color);
+	font-size: 2.2rem;
+	font-weight: 300;
+}
+
+b {
+	font-weight: bold;
+}
+
+main {
+	overflow-x: hidden;
+}
+
+.section-title {
+	display: flex;
+	align-items: center;
+
+	font-style: normal;
+	font-weight: 800;
+	font-size: 4.5rem;
+	line-height: 5.5rem;
+	text-transform: uppercase;
+
+	svg {
+		margin-top: -1rem;
+		margin-right: 1.5rem;
+	}
+}
+
+.sm-only {
+	display: none;
+
+	@include sm {
+		display: block;
+	}
+}
+
+.hide-sm {
+	@include sm {
+		display: none;
+	}
+}
